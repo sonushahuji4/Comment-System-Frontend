@@ -1,29 +1,21 @@
 import * as actions from './actions';
 
 export const initialState = {
-    authorDetails : {
-        userId : null,
+    customer : {
+        customerId : null,
         name : null,
         email : null,
-        email_verified : false,
         picture: null
-    },
-    usersContactList : []
+    }
 };
 
 export const reducer = (state: any, action: any) => {
     switch(action.type) {
-        case actions.AUTHOR_DETAILS:
+        case actions.CUSTOMER:
             return {
                 ...state,
-                authorDetails:action.payload.user,
-                usersContactList: action.payload.userList
+                customer:action.payload.customer
         }
-        case actions.USERS_LIST:
-            return {
-                ...state,
-                usersContactList: action.payload
-            }
         default: {
             return state;
         }
