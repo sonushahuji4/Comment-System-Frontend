@@ -1,0 +1,42 @@
+[
+    {
+        "customerId" : 2,
+        "name" : "Sachin Sharma",
+        "email" : "sachinsharma@gmail.com",
+        "picture" : "https://lh3.googleusercontent.com/a/ALm5wu2lEwBm-qu6fl5ndMYY6V62tzlLTju5vhIK9k8T1Q=s96-c",
+        "createdAt" : "2022-10-16T14:09:11.187+00:00",
+        "updatedAt": "2022-10-16T14:09:11.187+00:00"
+    },
+    {
+        "customerId" : 3,
+        "name" : "Mukund Chaudhary",
+        "email" : "mukundchaudhary@gmail.com",
+        "picture" : "https://lh3.googleusercontent.com/a/ALm5wu2HIJIEYuqh69Nz5DlMKSJdbWglfhOU8JjHAKEq=s96-c",
+        "createdAt" : "2022-10-30T04:30:50.915+00:00",
+        "updatedAt": "2022-10-30T04:30:50.915+00:00"
+    },
+    {
+        "customerId" : 4,
+        "name" : "Shubham Bist",
+        "email" : "shubhambist@gmail.com",
+        "picture" : "https://sb.kaleidousercontent.com/67418/960x550/16275b5905/photographers-1.png",
+        "createdAt" : "2022-10-16T10:05:17.107+00:00",
+        "updatedAt": "2022-10-16T10:05:17.107+00:00"
+    },
+    {
+        "customerId" : 5,
+        "name" : "Kyle Lobo",
+        "email" : "kylelogo@gmail.com",
+        "picture" : "https://sb.kaleidousercontent.com/67418/960x550/5d1ca08941/marketing-removebg-1.png",
+        "createdAt" : "2022-10-16T10:46:17.349+00:00",
+        "updatedAt": "2022-10-16T10:46:17.349+00:00"
+    },
+    {
+        "customerId" : 5,
+        "name" : "Siby Sharma",
+        "email" : "sibysharma@gmail.com",
+        "picture" : "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+        "createdAt" : "2022-10-16T14:11:11.902+00:00",
+        "updatedAt": "2022-10-16T14:11:11.902+00:00"
+    }
+]

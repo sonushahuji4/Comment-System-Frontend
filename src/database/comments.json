@@ -1,0 +1,56 @@
+[
+{
+    "commentId" : 1,
+    "content" : "In literary interpretation, paratext is material that surrounds a published main text supplied by the authors, editors, printers, and publishers. These added elements form a frame for the main text, and can change the reception of a text or its interpretation by",
+    "customerId" : 1,
+    "parentId" : null,
+    "upVotesCount": 0,
+    "createdAt" : "2022-10-16T10:05:17.107+00:00",
+    "updatedAt": "2022-10-16T10:05:17.107+00:00"
+},
+{
+    "commentId" : 2,
+    "content" : "In literary interpretation, paratext is material that surrounds a published main text supplied by the authors, editors, printers, and publishers. These added elements form a frame for the main text, and can change the reception of a text or its interpretation by",
+    "customerId" : 3,
+    "parentId" : null,
+    "upVotesCount": 0,
+    "createdAt" : "2022-10-16T10:05:27.180+00:00",
+    "updatedAt": "2022-10-16T10:05:27.180+00:00"
+},
+{
+    "commentId" : 3,
+    "content" : "In literary interpretation, paratext is material that surrounds a published main text supplied by the authors, editors, printers, and publishers. These added elements form a frame for the main text, and can change the reception of a text or its interpretation by",
+    "customerId" : 4,
+    "parentId" : null,
+    "upVotesCount": 0,
+    "createdAt" : "2022-10-16T10:46:28.601+00:00",
+    "updatedAt": "2022-10-16T10:46:28.601+00:00"
+},
+{
+    "commentId" : 4,
+    "content" : "Fourth Comment",
+    "customerId" : 6,
+    "parentId" : null,
+    "upVotesCount": 0,
+    "createdAt" : "2022-10-16T13:56:43.698+00:00",
+    "updatedAt": "2022-10-16T13:56:43.698+00:00"
+},
+{
+    "commentId" : 5,
+    "content" : "Fifth Comment",
+    "customerId" : 2,
+    "parentId" : null,
+    "upVotesCount": 0,
+    "createdAt" : "2022-10-16T14:10:15.185+00:00",
+    "updatedAt": "2022-10-16T14:10:15.185+00:00"
+},
+{
+    "commentId" : 6,
+    "content" : "Sixth Comment",
+    "customerId" : 5,
+    "parentId" : null,
+    "upVotesCount": 0,
+    "createdAt" : "2022-10-16T14:11:11.902+00:00",
+    "updatedAt": "2022-10-16T14:11:11.902+00:00"
+}
+]

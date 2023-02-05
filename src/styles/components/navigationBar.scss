@@ -1,0 +1,33 @@
+.nav-container{
+    display: flex;
+    background-color: #E9F1FF;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    align-self: stretch;
+    margin-bottom: 50px;
+
+    .flexiple-tab{
+        img{
+            height: 40px;
+        }
+    }
+
+    .nav-tabs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .home-tab{
+
+        }
+        .profile-tab{
+
+        }
+
+        .logout-tab{
+
+        }
+    }
+}
