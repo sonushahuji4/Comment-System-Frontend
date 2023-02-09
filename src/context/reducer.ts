@@ -2,10 +2,12 @@ import * as actions from './actions';
 
 export const initialState = {
     customer : {
-        customerId : null,
-        name : null,
+        customer_id : null,
+        customer_name : null,
         email : null,
-        picture: null
+        picture: null,
+        createdAt: null,
+        updatedAt: null
     }
 };
 

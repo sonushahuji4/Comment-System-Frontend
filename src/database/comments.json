@@ -1,56 +1,186 @@
 [
-{
-    "commentId" : 1,
-    "content" : "In literary interpretation, paratext is material that surrounds a published main text supplied by the authors, editors, printers, and publishers. These added elements form a frame for the main text, and can change the reception of a text or its interpretation by",
-    "customerId" : 1,
-    "parentId" : null,
-    "upVotesCount": 0,
-    "createdAt" : "2022-10-16T10:05:17.107+00:00",
-    "updatedAt": "2022-10-16T10:05:17.107+00:00"
-},
-{
-    "commentId" : 2,
-    "content" : "In literary interpretation, paratext is material that surrounds a published main text supplied by the authors, editors, printers, and publishers. These added elements form a frame for the main text, and can change the reception of a text or its interpretation by",
-    "customerId" : 3,
-    "parentId" : null,
-    "upVotesCount": 0,
-    "createdAt" : "2022-10-16T10:05:27.180+00:00",
-    "updatedAt": "2022-10-16T10:05:27.180+00:00"
-},
-{
-    "commentId" : 3,
-    "content" : "In literary interpretation, paratext is material that surrounds a published main text supplied by the authors, editors, printers, and publishers. These added elements form a frame for the main text, and can change the reception of a text or its interpretation by",
-    "customerId" : 4,
-    "parentId" : null,
-    "upVotesCount": 0,
-    "createdAt" : "2022-10-16T10:46:28.601+00:00",
-    "updatedAt": "2022-10-16T10:46:28.601+00:00"
-},
-{
-    "commentId" : 4,
-    "content" : "Fourth Comment",
-    "customerId" : 6,
-    "parentId" : null,
-    "upVotesCount": 0,
-    "createdAt" : "2022-10-16T13:56:43.698+00:00",
-    "updatedAt": "2022-10-16T13:56:43.698+00:00"
-},
-{
-    "commentId" : 5,
-    "content" : "Fifth Comment",
-    "customerId" : 2,
-    "parentId" : null,
-    "upVotesCount": 0,
-    "createdAt" : "2022-10-16T14:10:15.185+00:00",
-    "updatedAt": "2022-10-16T14:10:15.185+00:00"
-},
-{
-    "commentId" : 6,
-    "content" : "Sixth Comment",
-    "customerId" : 5,
-    "parentId" : null,
-    "upVotesCount": 0,
-    "createdAt" : "2022-10-16T14:11:11.902+00:00",
-    "updatedAt": "2022-10-16T14:11:11.902+00:00"
-}
+    {
+        "comment_id": 1,
+        "contents": "First Comments",
+        "customer_id": 1,
+        "parent_id": null,
+        "upvotescount": 0,
+        "createdat": "2023-02-06T17:00:55.797Z",
+        "updatedat": "2023-02-06T17:00:55.797Z",
+        "customers" : {
+            "customer_id" : 1,
+            "customer_name" : "Sachin Sharma",
+            "email" : "sachinsharma@gmail.com",
+            "picture" : "https://sb.kaleidousercontent.com/67418/960x550/5d1ca08941/marketing-removebg-1.png",
+            "createdAt" : "2022-10-16T14:09:11.187+00:00",
+            "updatedAt": "2022-10-16T14:09:11.187+00:00"
+        },
+        "children" : [
+            {
+                "comment_id": 2,
+                "contents": "Second Comments",
+                "customer_id": 1,
+                "parent_id": 1,
+                "upvotescount": 0,
+                "createdat": "2023-02-07T15:05:22.514Z",
+                "updatedat": "2023-02-07T15:05:22.514Z",
+                "customers" : {
+                    "customer_id" : 1,
+                    "customer_name" : "Sachin Sharma",
+                    "email" : "sachinsharma@gmail.com",
+                    "picture" : "https://sb.kaleidousercontent.com/67418/960x550/5d1ca08941/marketing-removebg-1.png",
+                    "createdAt" : "2022-10-16T14:09:11.187+00:00",
+                    "updatedAt": "2022-10-16T14:09:11.187+00:00"
+                },
+                "children" : [
+                    {
+                        "comment_id": 5,
+                        "contents": "nested query",
+                        "customer_id": 2,
+                        "parent_id": 1,
+                        "upvotescount": 0,
+                        "createdat": "2023-02-07T15:10:08.429Z",
+                        "updatedat": "2023-02-07T15:10:08.429Z",
+                        "customers" : {
+                            "customer_id" : 2,
+                            "customer_name" : "Mukund Chaudhary",
+                            "email" : "mukundchaudhary@gmail.com",
+                            "picture" : "https://lh3.googleusercontent.com/a/ALm5wu2HIJIEYuqh69Nz5DlMKSJdbWglfhOU8JjHAKEq=s96-c",
+                            "createdAt" : "2022-10-30T04:30:50.915+00:00",
+                            "updatedAt": "2022-10-30T04:30:50.915+00:00"
+                        },
+                        "children" : []
+                    }
+                ]
+            },
+            {
+                "comment_id": 4,
+                "contents": "Creating first comment",
+                "customer_id": 3,
+                "parent_id": 1,
+                "upvotescount": 0,
+                "createdat": "2023-02-07T15:08:32.090Z",
+                "updatedat": "2023-02-07T15:08:32.090Z",
+                "customers" : {
+                    "customer_id" : 3,
+                    "customer_name" : "Shubham Bist",
+                    "email" : "shubhambist@gmail.com",
+                    "picture" : "https://sb.kaleidousercontent.com/67418/960x550/16275b5905/photographers-1.png",
+                    "createdAt" : "2022-10-16T10:05:17.107+00:00",
+                    "updatedAt": "2022-10-16T10:05:17.107+00:00"
+                },
+                "children" : []
+            }
+        ]
+    },
+    {
+        "comment_id": 5,
+        "contents": "nested query",
+        "customer_id": 4,
+        "parent_id": null,
+        "upvotescount": 0,
+        "createdat": "2023-02-07T15:10:08.429Z",
+        "updatedat": "2023-02-07T15:10:08.429Z",
+        "customers" : {
+            "customer_id" : 4,
+            "customer_name" : "Kyle Lobo",
+            "email" : "kylelogo@gmail.com",
+            "picture" : "https://sb.kaleidousercontent.com/67418/960x550/5d1ca08941/marketing-removebg-1.png",
+            "createdAt" : "2022-10-16T10:46:17.349+00:00",
+            "updatedAt": "2022-10-16T10:46:17.349+00:00"
+        },
+        "children" : [
+            {
+                "comment_id": 11,
+                "contents": "nested query",
+                "customer_id": 5,
+                "parent_id": 5,
+                "upvotescount": 0,
+                "createdat": "2023-02-07T15:10:08.429Z",
+                "updatedat": "2023-02-07T15:10:08.429Z",
+                "customers" : {
+                    "customer_id" : 5,
+                    "customer_name" : "Siby Sharma",
+                    "email" : "sibysharma@gmail.com",
+                    "picture" : "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+                    "createdAt" : "2022-10-16T14:11:11.902+00:00",
+                    "updatedAt": "2022-10-16T14:11:11.902+00:00"
+                },
+                "children" : []
+            }
+        ]
+    },
+    {
+        "comment_id": 6,
+        "contents": "nested query",
+        "customer_id": 5,
+        "parent_id": 1,
+        "upvotescount": 4,
+        "createdat": "2023-02-07T15:10:47.804Z",
+        "updatedat": "2023-02-07T15:10:47.804Z",
+        "customers" : {
+            "customer_id" : 5,
+            "customer_name" : "Siby Sharma",
+            "email" : "sibysharma@gmail.com",
+            "picture" : "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+            "createdAt" : "2022-10-16T14:11:11.902+00:00",
+            "updatedAt": "2022-10-16T14:11:11.902+00:00"
+        },
+        "children" : [
+            {
+                "comment_id": 7,
+                "contents": "Creating comment system is usefull!",
+                "customer_id": 5,
+                "parent_id": 6,
+                "upvotescount": 0,
+                "createdat": "2023-02-07T15:13:04.501Z",
+                "updatedat": "2023-02-07T15:13:04.501Z",
+                "customers" : {
+                    "customer_id" : 5,
+                    "customer_name" : "Siby Sharma",
+                    "email" : "sibysharma@gmail.com",
+                    "picture" : "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+                    "createdAt" : "2022-10-16T14:11:11.902+00:00",
+                    "updatedAt": "2022-10-16T14:11:11.902+00:00"
+                },
+                "children" : []
+            }
+        ]
+    },
+    {
+        "comment_id": 9,
+        "contents": "comment system.",
+        "customer_id": 6,
+        "parent_id": null,
+        "upvotescount": 0,
+        "createdat": "2023-02-07T15:15:15.505Z",
+        "updatedat": "2023-02-07T15:15:15.505Z",
+        "customers" : {
+            "customer_id": 6,
+            "customer_name": "Sonu Shahuji",
+            "email": "sonushahuji4@gmail.com",
+            "picture": "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+            "createdat": "2023-02-06T16:54:31.465Z",
+            "updatedat": "2023-02-06T16:54:31.465Z"
+        },
+        "children" : []
+    },
+    {
+        "comment_id": 10,
+        "contents": "nested comment for comment system",
+        "customer_id": 6,
+        "parent_id": null,
+        "upvotescount": 1,
+        "createdat": "2023-02-07T15:16:51.516Z",
+        "updatedat": "2023-02-07T15:16:51.516Z",
+        "customers" : {
+            "customer_id": 6,
+            "customer_name": "Sonu Shahuji",
+            "email": "sonushahuji4@gmail.com",
+            "picture": "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+            "createdat": "2023-02-06T16:54:31.465Z",
+            "updatedat": "2023-02-06T16:54:31.465Z"
+        },
+        "children" : []
+    }
 ]

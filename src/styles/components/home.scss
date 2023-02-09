@@ -115,13 +115,16 @@
                     justify-content: flex-start;
                     align-items: flex-start;
                     width: 100%;
+                    gap: 10px;
 
                     .customer-img{
                         img{
+                            border: 1px solid #D5D8DC;
+                            width: 30px;
+                            height: 30px;
                             border-radius: 50%;
-                            border: 5px solid #F7F7F7;
-                            width: 60px;
-                            height: 100%;
+                            overflow: hidden;
+                            object-fit: cover;
                         }
                     }
 

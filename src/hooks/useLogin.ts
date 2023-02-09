@@ -8,11 +8,13 @@ const useLogin = () => {
     const onLoginSuccess = async (res: any) => {
         const decodeCredential: any = jwt_decode(res.credential);
         const credential = {
-            customerId : decodeCredential.sub,
-            name : decodeCredential.name,
+            customer_id : decodeCredential.sub,
+            customer_name : decodeCredential.name,
             email : decodeCredential.email,
             picture: decodeCredential.picture,
-            isLoggedIn: true
+            isLoggedIn: true,
+            createdAt : new Date().toISOString(),
+            updatedAt: new Date().toISOString()
         }
         dispatch({
             type : CUSTOMER,

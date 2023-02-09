@@ -1,7 +1,7 @@
 import NavigationBar from "./navigationBar";
 import Footer from "./footer";
 import Profile from "./profile";
-import Feed from "./feedPage";
+import Comment from "./comment";
 
 const Home = () => {
     return (
@@ -9,7 +9,7 @@ const Home = () => {
             <NavigationBar/>
             <div className="page-container">
                 <Profile />
-                <Feed />
+                <Comment />
             </div>
             <Footer/>
         </div>
