@@ -1,10 +1,9 @@
 
-import { useContext } from 'react';
 import jwt_decode from "jwt-decode";
-import { GlobalDispatchContext } from '../context/GlobalContextProvider';
-import { CUSTOMER } from '../context/actions';
+import { useNavigate } from "react-router-dom";
 const useLogin = () => {
-    const dispatch: any = useContext(GlobalDispatchContext);
+    const navigate = useNavigate();
+
     const onLoginSuccess = async (res: any) => {
         const decodeCredential: any = jwt_decode(res.credential);
         const credential = {
@@ -16,16 +15,13 @@ const useLogin = () => {
             createdAt : new Date().toISOString(),
             updatedAt: new Date().toISOString()
         }
-        dispatch({
-            type : CUSTOMER,
-            payload : {customer : credential}
-        });
-
         sessionStorage.setItem("customer",JSON.stringify(credential));
         sessionStorage.setItem("likesData",JSON.stringify([]));
+        navigate("/home");
     }  
     
     const onLoginError = () => {
+        navigate("/");
         throw ({err:'Login failed'});
     }
 

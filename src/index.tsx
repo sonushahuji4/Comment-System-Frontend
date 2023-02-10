@@ -1,13 +1,14 @@
 import ReactDOM from 'react-dom/client';
 import './styles/index.scss';
 import App from './App';
-import GlobalContextProvider from './context/GlobalContextProvider';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
-  <GlobalContextProvider>
-    <App />
-  </GlobalContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
 );

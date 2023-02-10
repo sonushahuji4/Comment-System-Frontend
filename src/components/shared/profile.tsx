@@ -1,8 +1,4 @@
-import { useContext } from "react";
-import { GlobalStateContext  } from "../../context/GlobalContextProvider";
-
 const Profile = () => {
-    const stateContext: any = useContext(GlobalStateContext);
     const credential: any = JSON.parse(sessionStorage.getItem("customer") || '{}');
     
     return (
@@ -15,6 +11,9 @@ const Profile = () => {
                 <div className="profile-content">
                     <div className="title">
                         <span>{credential?.customer_name}</span>
+                        <div className="verified">
+                            <img src="https://w7.pngwing.com/pngs/925/906/png-transparent-computer-icons-facebook-logo-verified-badge-facebook-blue-angle-text-thumbnail.png"></img>
+                        </div>
                     </div>
                     <div className="email">
                         <span>{credential?.email}</span>

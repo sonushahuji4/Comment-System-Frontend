@@ -3,6 +3,10 @@
     width: 100%;
     height: 100%;
 
+    .heart-color {
+        color: #ba000d;
+    }
+
     @import './components//loginPage.scss';
     @import './components//home.scss';
 }

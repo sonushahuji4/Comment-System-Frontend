@@ -1,18 +1,20 @@
 import { useState } from "react";
-import like from "../../statics/images/like.svg";
-import reply from "../../statics/images/reply.svg";
 import CreateComment from "./createComment";
 
 const NestedComments = ({comment,setCommentData,commentData,likesData,customer_id}: any) => {
     const [hideCommentCreator, setHideCommentCreator] = useState<boolean>(false);
     const [countLikes, setCountLikes] = useState(0);
+    const [isLikeActive, setIsLikeActive] = useState(false);
     
     const onLikes = (params: object) => {
         const { customer_id,comment_id }: any = params;
+        setIsLikeActive(!isLikeActive);
         const lenLikesData = likesData?.length;
         if(likesData?.length){
             for(let i=0; i<lenLikesData; i++){
                 if(customer_id === likesData[i].customer_id && comment_id === likesData[i].comment_id){
+                    likesData.splice(i,1);
+                    setCountLikes(countLikes - 1)
                     return
                 }
             }
@@ -25,7 +27,7 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
             setCountLikes(countLikes + 1)
         }
     }
-
+        
     const nestedComments = (comment.children || []).map((comment: any) => {
         return (
                 <NestedComments 
@@ -56,16 +58,14 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                     </div>
                     <div className="like-reply-card">
                         <div className="likes">
-                            <img src={like}></img>
                             <button
                                 onClick={() => onLikes({customer_id : customer_id,comment_id: comment.comment_id})}
-                            >{countLikes}</button>
+                            ><i className={`fa-solid fa-heart ${isLikeActive ? 'heart-color' : ''}`}></i> {countLikes}</button>
                         </div>
                         <div className="reply">
-                            <img src={reply}></img>
                             <button
                                 onClick={() => setHideCommentCreator(!hideCommentCreator)}
-                            >{"Reply"}</button>
+                            ><i className="fa-solid fa-comment-dots"></i></button>
                         </div>
                     </div>
                     {

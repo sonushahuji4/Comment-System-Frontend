@@ -1,23 +1,28 @@
 import './styles/App.scss';
-import { useContext } from 'react';
+import { useEffect } from 'react';
 import LoginPage from './components/shared/loginPage';
 import Home from './components/shared/home';
-import { GoogleOAuthProvider } from '@react-oauth/google';
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 const App = () => {
-  const clientId = '894720398292-60h39t5cbgnk1ens4p7p21mtgrb3fmk9.apps.googleusercontent.com';
+  const navigate = useNavigate();
   const credential: any = JSON.parse(sessionStorage.getItem("customer") || '{}');
+
+  useEffect(() => {
+    if(!credential?.isLoggedIn){
+      navigate("/");
+    }else{
+      navigate("/home");
+    }
+
+  },[credential?.isLoggedIn]);
 
   return (
     <div className="App">
-      {
-        credential?.isLoggedIn ? 
-          <Home></Home> 
-        : 
-        <GoogleOAuthProvider clientId={clientId}>
-          <LoginPage></LoginPage>
-        </GoogleOAuthProvider>
-      }
+      <Routes>
+        <Route path="/" element={<LoginPage/>} />
+        <Route path="/home" element={<Home/>} />
+      </Routes>
     </div>
   );
 }
