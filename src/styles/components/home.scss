@@ -164,6 +164,17 @@
                                     height: 20px;
                                     width: 20px;
                                 }
+                                button {
+                                    outline: none;
+                                    border: none;
+                                    background-color: #F7F7F7;
+                                    color: #566573;
+                                    cursor: pointer;
+                                }
+                                button:hover {
+                                    color: #2C3E50;
+                                    font-weight: 700;
+                                }
                             }
 
                             .reply{

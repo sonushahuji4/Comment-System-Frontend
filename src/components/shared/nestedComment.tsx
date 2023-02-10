@@ -3,9 +3,29 @@ import like from "../../statics/images/like.svg";
 import reply from "../../statics/images/reply.svg";
 import CreateComment from "./createComment";
 
-const NestedComments = ({comment,setCommentData,commentData}: any) => {
+const NestedComments = ({comment,setCommentData,commentData,likesData,customer_id}: any) => {
     const [hideCommentCreator, setHideCommentCreator] = useState<boolean>(false);
+    const [countLikes, setCountLikes] = useState(0);
     
+    const onLikes = (params: object) => {
+        const { customer_id,comment_id }: any = params;
+        const lenLikesData = likesData?.length;
+        if(likesData?.length){
+            for(let i=0; i<lenLikesData; i++){
+                if(customer_id === likesData[i].customer_id && comment_id === likesData[i].comment_id){
+                    return
+                }
+            }
+            likesData.push({customer_id,comment_id})
+            sessionStorage.setItem("likesData",JSON.stringify(likesData));
+            setCountLikes(countLikes + 1)
+        }else{
+            likesData.push({customer_id,comment_id})
+            sessionStorage.setItem("likesData",JSON.stringify(likesData));
+            setCountLikes(countLikes + 1)
+        }
+    }
+
     const nestedComments = (comment.children || []).map((comment: any) => {
         return (
                 <NestedComments 
@@ -13,6 +33,8 @@ const NestedComments = ({comment,setCommentData,commentData}: any) => {
                     comment={comment} 
                     setCommentData={setCommentData} 
                     commentData={commentData} 
+                    likesData={likesData}
+                    customer_id = {customer_id}
                     type="child"/>)
     })
     
@@ -35,7 +57,9 @@ const NestedComments = ({comment,setCommentData,commentData}: any) => {
                     <div className="like-reply-card">
                         <div className="likes">
                             <img src={like}></img>
-                            <span>0</span>
+                            <button
+                                onClick={() => onLikes({customer_id : customer_id,comment_id: comment.comment_id})}
+                            >{countLikes}</button>
                         </div>
                         <div className="reply">
                             <img src={reply}></img>

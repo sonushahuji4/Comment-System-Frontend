@@ -7,6 +7,8 @@ import { Helper } from "../../helper/helper";
 
 const Comment = () => {
     const [commentData, setCommentData] = useState<any[]>(Helper.sortByDate(comments));
+    const likesData: any = JSON.parse(sessionStorage.getItem("likesData") || '[]');
+    const credential: any = JSON.parse(sessionStorage.getItem("customer") || '{}');
     return (
         <div className="feed-container">
             <div className="feed-card">
@@ -22,6 +24,8 @@ const Comment = () => {
                             comment={comment} 
                             setCommentData = {setCommentData}
                             commentData = {commentData}
+                            likesData = {likesData}
+                            customer_id = {credential.customer_id}
                         />
                     )
                     })

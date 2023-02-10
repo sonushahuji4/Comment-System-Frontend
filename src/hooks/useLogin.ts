@@ -22,6 +22,7 @@ const useLogin = () => {
         });
 
         sessionStorage.setItem("customer",JSON.stringify(credential));
+        sessionStorage.setItem("likesData",JSON.stringify([]));
     }  
     
     const onLoginError = () => {
