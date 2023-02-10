@@ -20,7 +20,7 @@ const Comment = () => {
                     commentData.map((comment: any) => {
                     return (
                         <NestedComments 
-                            key={comment.comment_Id} 
+                            key={comment.comment_id} 
                             comment={comment} 
                             setCommentData = {setCommentData}
                             commentData = {commentData}

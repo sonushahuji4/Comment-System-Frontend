@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CreateComment from "./createComment";
+import { Helper } from "../../helper/helper";
 
 const NestedComments = ({comment,setCommentData,commentData,likesData,customer_id}: any) => {
     const [hideCommentCreator, setHideCommentCreator] = useState<boolean>(false);
@@ -28,6 +29,35 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
         }
     }
         
+    const onDeleteComment = (comment_id: any) => {
+        let newCommentsData = [...commentData];
+        const rec = (commentsData: any, i: any) => {
+            if(commentsData[i]?.comment_id == comment_id){
+                delete commentsData[i]?.children[i]
+                return
+            }
+            else{
+                if(commentsData[i]?.children.length){
+                    for(let j = 0; j < commentsData[i]?.children?.length; j++){
+                        rec(commentsData[i].children, j);
+                        return
+                    }
+                }
+            }
+            return 
+        }
+        for(let i=0; i < newCommentsData.length; i++){
+            if(newCommentsData[i]?.comment_id === comment_id){
+                delete newCommentsData[i];
+                setCommentData(Helper.sortByDate(newCommentsData));
+                return
+            }else{
+                rec(newCommentsData,i);
+                return
+            }
+        }
+    }
+
     const nestedComments = (comment.children || []).map((comment: any) => {
         return (
                 <NestedComments 
@@ -51,12 +81,13 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                     <div className="comment-box">
                         <div className="name-title">
                             <span>{comment?.customers?.customer_name}</span>
+                            <span style={{fontSize:"10px"}}>{(new Date(comment?.customers?.updatedAt)).toLocaleTimeString()}</span>
                         </div>
                         <div className="comment-content">
                             <p>{comment.contents}</p>
                         </div>
                     </div>
-                    <div className="like-reply-card">
+                    <div className="post-operations">
                         <div className="likes">
                             <button
                                 onClick={() => onLikes({customer_id : customer_id,comment_id: comment.comment_id})}
@@ -67,19 +98,26 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                                 onClick={() => setHideCommentCreator(!hideCommentCreator)}
                             ><i className="fa-solid fa-comment-dots"></i></button>
                         </div>
+                        <div className="edit">
+                            <button
+                                onClick={() => setHideCommentCreator(!hideCommentCreator)}
+                            ><i className="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                        <div className="delete">
+                            <button
+                                onClick={() => onDeleteComment(comment.comment_id)}
+                            ><i className="fa-solid fa-trash"></i></button>
+                        </div>
                     </div>
                     {
                         hideCommentCreator 
                         ? 
-                            <>
-                            {console.log("comment.comment_id :",comment.comment_id)}
                             <CreateComment 
                                 comment={comment} 
                                 setCommentData={setCommentData} 
                                 commentData={commentData} 
                                 setHideCommentCreator = {setHideCommentCreator} 
                                 parent_id={comment.comment_id}/>
-                                </>
 
                         : 
                             null 

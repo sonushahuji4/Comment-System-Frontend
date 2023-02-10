@@ -153,15 +153,17 @@
 
                             .name-title{
                                 color: #000;
-                                font-weight: 500;
+                                display: flex;
+                                justify-content: space-between;
                             }
                             .comment-content{
                                 p{
+                                    font-size: 12px;
                                     color: #566573;
                                 }
                             }
                         }
-                        .like-reply-card{
+                        .post-operations{
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
@@ -189,14 +191,8 @@
                                 }
                             }
 
-                            .reply{
+                            .reply, .edit, .delete{
                                 display: flex;
-                                gap: 10px;
-
-                                img{
-                                    height: 20px;
-                                    width: 20px;
-                                }
                                 button {
                                     outline: none;
                                     border: none;
