@@ -1,10 +1,19 @@
+import { useState } from "react";
 import like from "../../statics/images/like.svg";
 import reply from "../../statics/images/reply.svg";
+import CreateComment from "./createComment";
 
-const NestedComments = ({comment,setComment}: any) => {
+const NestedComments = ({comment,setCommentData,commentData}: any) => {
+    const [hideCommentCreator, setHideCommentCreator] = useState<boolean>(false);
     
     const nestedComments = (comment.children || []).map((comment: any) => {
-        return <NestedComments key={comment.comment_Id} comment={comment} type="child" />
+        return (
+                <NestedComments 
+                    key={comment.comment_id} 
+                    comment={comment} 
+                    setCommentData={setCommentData} 
+                    commentData={commentData} 
+                    type="child"/>)
     })
     
       return (
@@ -30,9 +39,28 @@ const NestedComments = ({comment,setComment}: any) => {
                         </div>
                         <div className="reply">
                             <img src={reply}></img>
-                            <span>{"Reply"}</span>
+                            <button
+                                onClick={() => setHideCommentCreator(!hideCommentCreator)}
+                            >{"Reply"}</button>
                         </div>
                     </div>
+                    {
+                        hideCommentCreator 
+                        ? 
+                            <>
+                            {console.log("comment.comment_id :",comment.comment_id)}
+                            <CreateComment 
+                                comment={comment} 
+                                setCommentData={setCommentData} 
+                                commentData={commentData} 
+                                setHideCommentCreator = {setHideCommentCreator} 
+                                parent_id={comment.comment_id}/>
+                                </>
+
+                        : 
+                            null 
+                    }
+                    
 
                 </div>
             </div>

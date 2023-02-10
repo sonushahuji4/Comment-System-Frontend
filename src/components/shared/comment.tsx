@@ -6,18 +6,22 @@ import { Helper } from "../../helper/helper";
 
 
 const Comment = () => {
-    const [comment, setComment] = useState<any[]>(Helper.sortComments(comments));
+    const [commentData, setCommentData] = useState<any[]>(Helper.sortByDate(comments));
     return (
         <div className="feed-container">
             <div className="feed-card">
-                <CreateComment setComment={setComment} comment={comment}/>
+                <CreateComment 
+                    commentData={commentData} 
+                    setCommentData={setCommentData} 
+                    parent_id={null}/>
                 {
-                    comment.map((comment: any) => {
+                    commentData.map((comment: any) => {
                     return (
                         <NestedComments 
                             key={comment.comment_Id} 
                             comment={comment} 
-                            setComment = {setComment}
+                            setCommentData = {setCommentData}
+                            commentData = {commentData}
                         />
                     )
                     })
