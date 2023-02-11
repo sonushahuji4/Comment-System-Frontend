@@ -2,7 +2,7 @@ import { useState } from "react";
 import Reply from "./replyPage";
 import useCrudOperation from "../../hooks/useCrudOperation";
 
-const NestedComments = ({comment,setCommentData,commentData,likesData,customer_id}: any) => {
+const NestedComments = ({comment,setCommentData,commentData,likesData,customer_id,}: any) => {
     const { onUpdateReply,onDeleteReply,onReply } = useCrudOperation();
     const [countLikes, setCountLikes] = useState(0);
     const [isLikeActive, setIsLikeActive] = useState(false);
@@ -73,16 +73,23 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                                 onClick={() => setHideReply(!isEditActive && !hideReply)}
                             ><i className="fa-solid fa-comment-dots"></i></button>
                         </div>
-                        <div className="edit">
-                            <button
-                                onClick={() => seIsEditActive(!isEditActive && !hideReply)}
-                            ><i className="fa-solid fa-pen-to-square"></i></button>
-                        </div>
-                        <div className="delete">
-                            <button
-                                onClick={() => onDeleteReply(commentData,comment.comment_id,setCommentData)}
-                            ><i className="fa-solid fa-trash"></i></button>
-                        </div>
+                        {
+                            customer_id === comment.customers.customer_id ?                         
+                            <div className="edit">
+                                <button
+                                    onClick={() => seIsEditActive(!isEditActive && !hideReply)}
+                                ><i className="fa-solid fa-pen-to-square"></i></button>
+                            </div>: null
+                        }
+                        {
+                            customer_id === comment.customers.customer_id ?   
+                            <div className="delete">
+                                <button
+                                    onClick={() => onDeleteReply(commentData,comment.comment_id,setCommentData)}
+                                ><i className="fa-solid fa-trash"></i></button>
+                            </div>: null
+                        }
+
                     </div>
                     {
                         isEditActive 

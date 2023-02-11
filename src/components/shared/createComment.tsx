@@ -1,12 +1,9 @@
-import { useState } from "react";
-import { Helper } from "../../helper/helper";
-import useCrudOperation from "../../hooks/useCrudOperation";
-
 const CreateComment = ({commentData,onCreateComment,setCommentData,text,setText}: any) => {
     return (
         <div className="create-comment">
             <div className="content">
                 <textarea
+                    placeholder="Start a new comment"
                     value={text}
                     onChange={e => setText(e.target.value)}
                 />
