@@ -1,9 +1,9 @@
 [
     {
         "customer_id" : 1,
-        "customer_name" : "Sachin Sharma",
-        "email" : "sachinsharma@gmail.com",
-        "picture" : "https://lh3.googleusercontent.com/a/ALm5wu2lEwBm-qu6fl5ndMYY6V62tzlLTju5vhIK9k8T1Q=s96-c",
+        "customer_name" : "Ghyanmitra jiblapnor",
+        "email" : "ghyanmitrajiblapnor@gmail.com",
+        "picture" : "https://lh3.googleusercontent.com/a-/AD5-WClSKAO29KGMc7kX9o7UHcLMfXj8quVf0ZZ8ofLl8Q=s40-p",
         "createdAt" : "2022-10-16T14:09:11.187+00:00",
         "updatedAt": "2022-10-16T14:09:11.187+00:00"
     },

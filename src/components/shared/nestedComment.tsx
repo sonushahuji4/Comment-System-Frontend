@@ -56,7 +56,7 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                     <div className="comment-box">
                         <div className="name-title">
                             <span>{comment?.customers?.customer_name}</span>
-                            <span style={{fontSize:"10px"}}>{(new Date(comment?.updatedAt)).toLocaleTimeString()}</span>
+                            <span style={{fontSize:"10px"}}>{(new Date(comment?.updatedAt)).toLocaleString()}</span>
                         </div>
                         <div className="comment-content">
                             <p>{comment.contents}</p>

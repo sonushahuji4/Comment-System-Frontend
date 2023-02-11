@@ -1,51 +1,51 @@
 [
     {
         "comment_id": 1,
-        "contents": "First Comments",
+        "contents": "No one appreciates the very special genius of our conversation as much as your dog does.",
         "customer_id": 1,
         "parent_id": null,
         "upvotescount": 0,
-        "createdAt" : "2022-10-30T04:30:50.915+00:00",
-        "updatedAt": "2022-10-30T04:30:50.915+00:00",
+        "createdAt" : "2023-01-30T04:03:50.915+00:00",
+        "updatedAt": "2023-01-30T04:03:50.915+00:00",
         "customers" : {
             "customer_id" : 1,
-            "customer_name" : "Sachin Sharma",
-            "email" : "sachinsharma@gmail.com",
-            "picture" : "https://sb.kaleidousercontent.com/67418/960x550/5d1ca08941/marketing-removebg-1.png",
+            "customer_name" : "Ghyanmitra jiblapnor",
+            "email" : "ghyanmitrajiblapnor@gmail.com",
+            "picture" : "https://lh3.googleusercontent.com/a-/AD5-WClSKAO29KGMc7kX9o7UHcLMfXj8quVf0ZZ8ofLl8Q=s40-p",
             "createdAt" : "2022-10-16T14:09:11.187+00:00",
             "updatedAt": "2022-10-16T14:09:11.187+00:00"
         },
         "children" : [
             {
                 "comment_id": 2,
-                "contents": "Second Comments",
+                "contents": "Be a rainbow in someone else's cloud.",
                 "customer_id": 1,
                 "parent_id": 1,
                 "upvotescount": 0,
-                "createdAt" : "2022-10-30T04:30:50.915+00:00",
-                "updatedAt": "2022-10-30T04:30:50.915+00:00",
+                "createdAt" : "2023-02-03T01:04:50.915+00:00",
+                "updatedAt": "2023-02-03T01:04:50.915+00:00",
                 "customers" : {
-                    "customer_id" : 1,
-                    "customer_name" : "Sachin Sharma",
-                    "email" : "sachinsharma@gmail.com",
-                    "picture" : "https://sb.kaleidousercontent.com/67418/960x550/5d1ca08941/marketing-removebg-1.png",
-                    "createdAt" : "2022-10-16T14:09:11.187+00:00",
-                    "updatedAt": "2022-10-16T14:09:11.187+00:00"
+                    "customer_id" : 3,
+                    "customer_name" : "Kyle Lobo",
+                    "email" : "kylelobo11898@gmail.com",
+                    "picture" : "https://avatars.githubusercontent.com/u/25124502?v=4",
+                    "createdAt" : "2022-10-16T10:05:17.107+00:00",
+                    "updatedAt": "2022-10-16T10:05:17.107+00:00"
                 },
                 "children" : [
                     {
                         "comment_id": 15,
-                        "contents": "nested query",
+                        "contents": "You are not born a winner. You are not born a loser. You are born a chooser.",
                         "customer_id": 2,
                         "parent_id": 1,
                         "upvotescount": 0,
-                        "createdAt" : "2022-10-30T04:30:50.915+00:00",
-                        "updatedAt": "2022-10-30T04:30:50.915+00:00",
+                        "createdAt" : "2023-02-05T04:30:50.915+00:00",
+                        "updatedAt": "2023-02-05T04:30:50.915+00:00",
                         "customers" : {
                             "customer_id" : 2,
-                            "customer_name" : "Mukund Chaudhary",
-                            "email" : "mukundchaudhary@gmail.com",
-                            "picture" : "https://lh3.googleusercontent.com/a/ALm5wu2HIJIEYuqh69Nz5DlMKSJdbWglfhOU8JjHAKEq=s96-c",
+                            "customer_name" : "Mukund Choudhary",
+                            "email" : "mukundchoudhary126@gmail.com",
+                            "picture" : "https://lh3.googleusercontent.com/a-/AD5-WCkj3HbyqWOvnedNJZiNoIPlHgWxRyibfiJv2le5=s48-p",
                             "createdAt" : "2022-10-30T04:30:50.915+00:00",
                             "updatedAt": "2022-10-30T04:30:50.915+00:00"
                         },
@@ -55,17 +55,17 @@
             },
             {
                 "comment_id": 4,
-                "contents": "Creating first comment",
+                "contents": "Your diet isn't only what you eat. It's what you watch; it's what you read; it's what you listen to.",
                 "customer_id": 3,
                 "parent_id": 1,
                 "upvotescount": 0,
-                "createdAt" : "2022-10-30T04:30:50.915+00:00",
-                "updatedAt": "2022-10-30T04:30:50.915+00:00",
+                "createdAt" : "2023-02-05T09:00:50.915+00:00",
+                "updatedAt": "2023-02-05T09:00:50.915+00:00",
                 "customers" : {
                     "customer_id" : 3,
-                    "customer_name" : "Shubham Bist",
-                    "email" : "shubhambist@gmail.com",
-                    "picture" : "https://sb.kaleidousercontent.com/67418/960x550/16275b5905/photographers-1.png",
+                    "customer_name" : "Shubham Bisht",
+                    "email" : "shubham99bisht@gmail.com",
+                    "picture" : "https://lh3.googleusercontent.com/a-/AD5-WCnZ0Rr19Ft1Gogd9wMTsByl4znXvsJIwVCPPHXxdA=s40-p",
                     "createdAt" : "2022-10-16T10:05:17.107+00:00",
                     "updatedAt": "2022-10-16T10:05:17.107+00:00"
                 },
@@ -75,24 +75,24 @@
     },
     {
         "comment_id": 5,
-        "contents": "nested query",
+        "contents": "There ain't no answer. There ain't going to be any answer. There has never been an answer. That's the answer.",
         "customer_id": 4,
         "parent_id": null,
         "upvotescount": 0,
-        "createdAt" : "2022-10-30T04:30:50.915+00:00",
-        "updatedAt": "2022-10-30T04:30:50.915+00:00",
+        "createdAt" : "2023-02-09T04:07:07.915+00:00",
+        "updatedAt": "2023-02-09T04:07:07.915+00:00",
         "customers" : {
             "customer_id" : 4,
-            "customer_name" : "Kyle Lobo",
-            "email" : "kylelogo@gmail.com",
-            "picture" : "https://sb.kaleidousercontent.com/67418/960x550/5d1ca08941/marketing-removebg-1.png",
+            "customer_name" : "Dilip Kumar",
+            "email" : "dilipkumar89@gmail.com",
+            "picture" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6P5uKDuTHFQjwKKJQrSrBBYEDc0HcxmCwQ&usqp=CAU",
             "createdAt" : "2022-10-30T04:30:50.915+00:00",
             "updatedAt": "2022-10-30T04:30:50.915+00:00"
         },
         "children" : [
             {
                 "comment_id": 11,
-                "contents": "nested query",
+                "contents": "The more things you try, the more you will find what you don't like, and the more you will become aware of what brings you fulfillment. It takes courage to do that!",
                 "customer_id": 5,
                 "parent_id": 5,
                 "upvotescount": 0,
@@ -100,9 +100,9 @@
                 "updatedAt": "2022-10-30T04:30:50.915+00:00",
                 "customers" : {
                     "customer_id" : 5,
-                    "customer_name" : "Siby Sharma",
-                    "email" : "sibysharma@gmail.com",
-                    "picture" : "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+                    "customer_name" : "Siby Thampi",
+                    "email" : "cb111998@gmail.com",
+                    "picture" : "https://media.licdn.com/dms/image/C4D03AQFmRsbphOfvzg/profile-displayphoto-shrink_400_400/0/1646629793195?e=1681344000&v=beta&t=aloye002C3e3MNkgS6I71pdu2FlC4gb4vNaQwe7zoRQ",
                     "createdAt" : "2022-10-16T14:11:11.902+00:00",
                     "updatedAt": "2022-10-16T14:11:11.902+00:00"
                 },
@@ -112,7 +112,7 @@
     },
     {
         "comment_id": 6,
-        "contents": "nested query",
+        "contents": "The secret of change is to focus all of your energy, not on fighting the old but on building the new.",
         "customer_id": 5,
         "parent_id": 1,
         "upvotescount": 4,
@@ -120,8 +120,8 @@
         "updatedAt": "2022-10-30T04:30:50.915+00:00",
         "customers" : {
             "customer_id" : 5,
-            "customer_name" : "Siby Sharma",
-            "email" : "sibysharma@gmail.com",
+            "customer_name" : "Sunny Deol",
+            "email" : "sunnydeol89@gmail.com",
             "picture" : "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
             "createdAt" : "2022-10-16T14:11:11.902+00:00",
             "updatedAt": "2022-10-16T14:11:11.902+00:00"
@@ -129,7 +129,7 @@
         "children" : [
             {
                 "comment_id": 7,
-                "contents": "Creating comment system is usefull!",
+                "contents": "Don't forget you're human. It's okay to have a meltdown. Just don't unpack and live there. Refocus on where you're headed.",
                 "customer_id": 5,
                 "parent_id": 6,
                 "upvotescount": 0,
@@ -137,9 +137,9 @@
                 "updatedAt": "2022-10-30T04:30:50.915+00:00",
                 "customers" : {
                     "customer_id" : 5,
-                    "customer_name" : "Siby Sharma",
-                    "email" : "sibysharma@gmail.com",
-                    "picture" : "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+                    "customer_name" : "Saif Ali Khan",
+                    "email" : "saifAliKhan@gmail.com",
+                    "picture" : "data:image/jpeg;base64,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",
                     "createdAt" : "2022-10-16T14:11:11.902+00:00",
                     "updatedAt": "2022-10-16T14:11:11.902+00:00"
                 },
@@ -149,17 +149,17 @@
     },
     {
         "comment_id": 9,
-        "contents": "comment system.",
+        "contents": "Perseverance is in doing the hard work after you get tired of doing the hard work you already did.",
         "customer_id": 6,
         "parent_id": null,
         "upvotescount": 0,
-        "createdAt" : "2022-10-30T04:30:50.915+00:00",
-        "updatedAt": "2022-10-30T04:30:50.915+00:00",
+        "createdAt" : "2023-02-10T04:04:00.915+00:00",
+        "updatedAt": "2023-02-10T04:04:00.915+00:00",
         "customers" : {
             "customer_id": 6,
-            "customer_name": "Sonu Shahuji",
-            "email": "sonushahuji4@gmail.com",
-            "picture": "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+            "customer_name": "mark zuckerberg",
+            "email": "markzuckerberg@gmail.com",
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToPqVhNkrDO0wmGJ39yDfb_SBCpwnlAq_G6g&usqp=CAU",
             "createdat": "2022-10-16T14:11:11.902+00:00",
             "updatedat": "2022-10-16T14:11:11.902+00:00"
         },
@@ -167,7 +167,7 @@
     },
     {
         "comment_id": 10,
-        "contents": "nested comment for comment system",
+        "contents": "When you finally heal, you'll realize they had nothing to offer you from day one. Just lies and bullshit. It was YOU who had everything they wanted.",
         "customer_id": 6,
         "parent_id": null,
         "upvotescount": 1,
@@ -175,9 +175,9 @@
         "updatedAt": "2022-10-30T04:30:50.915+00:00",
         "customers" : {
             "customer_id": 6,
-            "customer_name": "Sonu Shahuji",
-            "email": "sonushahuji4@gmail.com",
-            "picture": "https://img.freepik.com/free-photo/headshot-pleased-hipster-guy-dressed-maroon-t-shirt_176532-8161.jpg",
+            "customer_name": "Elon Musk",
+            "email": "elonmusk4@gmail.com",
+            "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
             "createdAt" : "2022-10-16T14:11:11.902+00:00",
             "updatedAt": "2022-10-16T14:11:11.902+00:00"
         },
