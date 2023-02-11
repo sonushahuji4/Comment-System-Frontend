@@ -70,12 +70,12 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                         </div>
                         <div className="reply">
                             <button
-                                onClick={() => setHideReply(!hideReply)}
+                                onClick={() => setHideReply(!isEditActive && !hideReply)}
                             ><i className="fa-solid fa-comment-dots"></i></button>
                         </div>
                         <div className="edit">
                             <button
-                                onClick={() => seIsEditActive(!isEditActive)}
+                                onClick={() => seIsEditActive(!isEditActive && !hideReply)}
                             ><i className="fa-solid fa-pen-to-square"></i></button>
                         </div>
                         <div className="delete">
@@ -88,7 +88,7 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                         isEditActive 
                         ? 
                             <Reply 
-                                btnText={"Update"} 
+                                btnText={"UPDATE"} 
                                 text={text} 
                                 comment_id = {comment.comment_id}
                                 setText={setText} 
@@ -102,7 +102,7 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                         hideReply 
                         ? 
                             <Reply 
-                                btnText={"Reply"} 
+                                btnText={"REPLY"} 
                                 text={replyText} 
                                 comment_id = {comment.comment_id}
                                 setText={setReplyText} 
