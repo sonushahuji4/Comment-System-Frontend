@@ -1,0 +1,30 @@
+.footer-container{
+    display: flex;
+    width: 100%;
+    background-color: #6200EE;
+    min-height: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+
+    .footer-text{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+        @media only screen 
+        and (min-device-width: 280px) 
+        and (max-device-width: 653px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px;    
+            font-size: 12px;
+            gap: 5px;
+            flex-direction: column-reverse;
+        }
+    }
+
+}
