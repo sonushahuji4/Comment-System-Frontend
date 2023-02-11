@@ -17,6 +17,6 @@ export class Helper {
     }
 
     public static sortByDate = (arr: any[]) => {
-        return arr.sort((a: any,b: any) =>(a.updatedat > b.updatedat) ? -1 : ((a.updatedat < b.updatedat) ? 1 : 0));
+        return arr.sort((a: any,b: any) => (a.updatedAt > b.updatedAt) ? -1 : ((a.updatedAt < b.updatedAt) ? 1 : 0));
     }
 }

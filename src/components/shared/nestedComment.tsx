@@ -1,11 +1,15 @@
 import { useState } from "react";
-import CreateComment from "./createComment";
-import { Helper } from "../../helper/helper";
+import Reply from "./replyPage";
+import useCrudOperation from "../../hooks/useCrudOperation";
 
 const NestedComments = ({comment,setCommentData,commentData,likesData,customer_id}: any) => {
-    const [hideCommentCreator, setHideCommentCreator] = useState<boolean>(false);
+    const { onUpdateReply,onDeleteReply,onReply } = useCrudOperation();
     const [countLikes, setCountLikes] = useState(0);
     const [isLikeActive, setIsLikeActive] = useState(false);
+    const [isEditActive, seIsEditActive] = useState<boolean>(false);
+    const [text, setText] = useState<any>(comment?.contents);
+    const [replyText, setReplyText] = useState<any>('');
+    const [hideReply, setHideReply] = useState<boolean>(false);
     
     const onLikes = (params: object) => {
         const { customer_id,comment_id }: any = params;
@@ -27,25 +31,6 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
             sessionStorage.setItem("likesData",JSON.stringify(likesData));
             setCountLikes(countLikes + 1)
         }
-    }
-        
-    const onDeleteComment = (comment_id: any) => {
-        const deleteComment = (comments: any, comment_id: any) => {
-            for (const [index, eachComment] of comments.entries()) {
-                if (eachComment.comment_id === comment_id) {
-                    comments.splice(index, 1);
-                    continue;
-                }
-                if (eachComment.children) {
-                    deleteComment(eachComment.children, comment_id);
-                }
-            }
-            return comments;
-        }
-
-        let newCommentsData = [...commentData];
-        const updateComments = deleteComment(newCommentsData,comment_id)
-        setCommentData(Helper.sortByDate(updateComments));
     }
 
     const nestedComments = (comment.children || []).map((comment: any) => {
@@ -71,7 +56,7 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                     <div className="comment-box">
                         <div className="name-title">
                             <span>{comment?.customers?.customer_name}</span>
-                            <span style={{fontSize:"10px"}}>{(new Date(comment?.customers?.updatedAt)).toLocaleTimeString()}</span>
+                            <span style={{fontSize:"10px"}}>{(new Date(comment?.updatedAt)).toLocaleTimeString()}</span>
                         </div>
                         <div className="comment-content">
                             <p>{comment.contents}</p>
@@ -85,34 +70,47 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
                         </div>
                         <div className="reply">
                             <button
-                                onClick={() => setHideCommentCreator(!hideCommentCreator)}
+                                onClick={() => setHideReply(!hideReply)}
                             ><i className="fa-solid fa-comment-dots"></i></button>
                         </div>
                         <div className="edit">
                             <button
-                                onClick={() => setHideCommentCreator(!hideCommentCreator)}
+                                onClick={() => seIsEditActive(!isEditActive)}
                             ><i className="fa-solid fa-pen-to-square"></i></button>
                         </div>
                         <div className="delete">
                             <button
-                                onClick={() => onDeleteComment(comment.comment_id)}
+                                onClick={() => onDeleteReply(commentData,comment.comment_id,setCommentData)}
                             ><i className="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
                     {
-                        hideCommentCreator 
+                        isEditActive 
                         ? 
-                            <CreateComment 
-                                comment={comment} 
-                                setCommentData={setCommentData} 
-                                commentData={commentData} 
-                                setHideCommentCreator = {setHideCommentCreator} 
-                                parent_id={comment.comment_id}/>
+                            <Reply 
+                                btnText={"Update"} 
+                                text={text} 
+                                comment_id = {comment.comment_id}
+                                setText={setText} 
+                                onClick = {(comment_id) => onUpdateReply(commentData,comment_id,setCommentData,seIsEditActive,text)} 
+                                />
 
                         : 
                             null 
                     }
-                    
+                    {
+                        hideReply 
+                        ? 
+                            <Reply 
+                                btnText={"Reply"} 
+                                text={replyText} 
+                                comment_id = {comment.comment_id}
+                                setText={setReplyText} 
+                                onClick = {(comment_id) => onReply(commentData,setCommentData,comment_id,replyText,setReplyText,setHideReply)} 
+                            />
+                        : 
+                            null 
+                    }
 
                 </div>
             </div>
