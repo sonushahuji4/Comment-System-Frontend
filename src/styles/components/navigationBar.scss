@@ -1,39 +1,71 @@
 .nav-container{
-    display: flex;
     background-color: #E9F1FF;
     width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    align-self: stretch;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
-    .flexiple-tab{
-        img{
-            height: 40px;
-        }
+    @media only screen 
+    and (min-device-width: 280px) 
+    and (max-device-width: 653px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        gap: 10px;
+        margin-bottom: 20px;
     }
 
-    .nav-tabs{
+    .tab-holder{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+        justify-content: space-around;
+        width: 90%;
+        font-size: 16px;
+        margin: 10px;
 
-        .home-tab{
-            font-weight: 700;
-            cursor: pointer;
-        }
-        .home-tab:hover {
-            color: #6200EE;
+        .flexiple-tab{
+            img{
+                height: 40px;
+            }
+                    @media only screen 
+            and (min-device-width: 280px) 
+            and (max-device-width: 653px)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                img{
+                    height: 30px;
+                }
+            }
         }
 
-        .logout-tab{
-            cursor: pointer;
-            font-weight: 700;
+        @media only screen 
+        and (min-device-width: 280px) 
+        and (max-device-width: 653px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            font-size: 12px;
         }
-        .logout-tab:hover {
-            color: #6200EE;
+
+        .nav-tabs{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .home-tab{
+                font-weight: 700;
+                cursor: pointer;
+            }
+            .home-tab:hover {
+                color: #6200EE;
+            }
+
+            .logout-tab{
+                cursor: pointer;
+                font-weight: 700;
+            }
+            .logout-tab:hover {
+                color: #6200EE;
+            }
         }
     }
 }

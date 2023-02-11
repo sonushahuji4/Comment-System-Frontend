@@ -6,15 +6,17 @@ const NavigationBar = () => {
     const onLogout  = useLogout();
     return (
         <div className="nav-container">
-            <div className="flexiple-tab">
-                <img src={flexiple} alt="flexiple-icon"></img>
-            </div>
-            <div className="nav-tabs">
-                <div className="home-tab">
-                    <span onClick={() => navigate("/home")}>{"Home"}</span>
+            <div className="tab-holder">
+                <div className="flexiple-tab">
+                    <img src={flexiple} alt="flexiple-icon"></img>
                 </div>
-                <div className="logout-tab">
-                    <span onClick={onLogout}>{"Logout"}</span>
+                <div className="nav-tabs">
+                    <div className="home-tab">
+                        <span onClick={() => navigate("/home")}>{"Home"}</span>
+                    </div>
+                    <div className="logout-tab">
+                        <span onClick={onLogout}>{"Logout"}</span>
+                    </div>
                 </div>
             </div>
         </div>
