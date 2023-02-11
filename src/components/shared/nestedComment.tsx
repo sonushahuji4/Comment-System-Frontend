@@ -30,32 +30,22 @@ const NestedComments = ({comment,setCommentData,commentData,likesData,customer_i
     }
         
     const onDeleteComment = (comment_id: any) => {
-        let newCommentsData = [...commentData];
-        const rec = (commentsData: any, i: any) => {
-            if(commentsData[i]?.comment_id == comment_id){
-                delete commentsData[i]?.children[i]
-                return
-            }
-            else{
-                if(commentsData[i]?.children.length){
-                    for(let j = 0; j < commentsData[i]?.children?.length; j++){
-                        rec(commentsData[i].children, j);
-                        return
-                    }
+        const deleteComment = (comments: any, comment_id: any) => {
+            for (const [index, eachComment] of comments.entries()) {
+                if (eachComment.comment_id === comment_id) {
+                    comments.splice(index, 1);
+                    continue;
+                }
+                if (eachComment.children) {
+                    deleteComment(eachComment.children, comment_id);
                 }
             }
-            return 
+            return comments;
         }
-        for(let i=0; i < newCommentsData.length; i++){
-            if(newCommentsData[i]?.comment_id === comment_id){
-                delete newCommentsData[i];
-                setCommentData(Helper.sortByDate(newCommentsData));
-                return
-            }else{
-                rec(newCommentsData,i);
-                return
-            }
-        }
+
+        let newCommentsData = [...commentData];
+        const updateComments = deleteComment(newCommentsData,comment_id)
+        setCommentData(Helper.sortByDate(updateComments));
     }
 
     const nestedComments = (comment.children || []).map((comment: any) => {
