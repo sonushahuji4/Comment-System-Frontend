@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-    <img src="./src/statics/images/flexipleIcon.png" height="50px" alt="Project logo">
+    <img src="./githubImges/flexipleIcon.png" height="50px" alt="Project logo">
  </a>
 </p>
 <h3 align="center">Comment System Application</h3>
@@ -85,13 +85,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 # Screenshots For Desktop <a name = "Screenshots"></a>
 
 - Login Page
-<img src="./src/statics/images/loginIcon.png" alt="Project logo">
+<img src="./githubImges/loginIcon.png" alt="Project logo">
 
 - Home Page
-<img src="./src/statics/images/HomeIcon.png" alt="Project logo">
+<img src="./githubImges/HomeIcon.png" alt="Project logo">
 
 - Footer Page
-<img src="./src/statics/images/footerIcon.png" alt="Project logo">
+<img src="./githubImges/footerIcon.png" alt="Project logo">
 
 ---
 
@@ -99,13 +99,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 ### Login Page
-<img src="./src/statics/images/loginIconMobile.png" height="500px" width="260px" alt="Project logo">
+<img src="./githubImges/loginIconMobile.png" height="500px" width="260px" alt="Project logo">
 
 ### Home Page
-<img src="./src/statics/images/homeIconMobile.png" height="500px" width="260px" alt="Project logo">
+<img src="./githubImges/homeIconMobile.png" height="500px" width="260px" alt="Project logo">
 
 ### Footer Page
-<img src="./src/statics/images/footerIconMobile.png" height="500px" width="260px" alt="Project logo">
+<img src="./githubImges/footerIconMobile.png" height="500px" width="260px" alt="Project logo">
 
 ---
 
